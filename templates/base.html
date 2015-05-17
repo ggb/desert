@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="{{ DEFAULT_LANG }}">
+<head>
+	<meta charset="utf-8" />
+	{% block metatags %}
+	<meta name="description" content="Der Blog eines Entwicklers &Atilde;&frac14;ber dessen Ideen und ihre Ausw&Atilde;&frac14;chse, Nachkommen und S&Atilde;&para;hne...">
+	<meta name="keywords" content="programmierung, webentwicklung, entwicklung, web, css, javascript, python, philosophie, hichert, onlinemarketing, marketing, linux">
+	{% endblock %}
+	<meta name="author" content="Gregor Grosse-Boelting">
+	<meta name="copyright" content="ggb">
+	<meta name="content-language" content="de">
+	<link rel="image_src" href="http://www.ideen-und-soehne.de/static/images/vorschau.jpg">
+
+	{% block head %}
+	<title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
+		
+	{% if FEED_ALL_ATOM %}
+	<link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed" />
+	{% endif %}
+	{% if FEED_ALL_RSS %}
+	<link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Full RSS Feed" />
+	{% endif %}
+	{% if FEED_ATOM %}
+	<link href="{{ FEED_DOMAIN }}/{{ FEED_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed" />
+	{% endif %}
+	{% if FEED_RSS %}
+	<link href="{{ FEED_DOMAIN }}/{{ FEED_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
+	{% endif %}
+	{% if CATEGORY_FEED_ATOM and category %}
+	<link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_ATOM|format(category.slug) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Categories Atom Feed" />
+	{% endif %}
+	{% if CATEGORY_FEED_RSS and category %}
+	<link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_RSS|format(category.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Categories RSS Feed" />
+	{% endif %}
+	{% if TAG_FEED_ATOM and tag %}
+	<link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_ATOM|format(tag.slug) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Tags Atom Feed" />
+	{% endif %}
+	{% if TAG_FEED_RSS and tag %}
+	<link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_RSS|format(tag.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Tags RSS Feed" />
+	{% endif %}
+	{% endblock head %}
+	<link href='http://fonts.googleapis.com/css?family=Kreon' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="{% block praefix %}{% endblock %}theme/css/style.css">
+	<link rel="stylesheet" type="text/css" href="theme/css/syntax.css">
+	
+	{% block opengraph %}
+	<meta property="og:title" content="Ideen und Söhne, Index" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="http://www.ideen-und-soehne.de/" />
+	<meta property="og:description" content="Der Blog eines Entwicklers über dessen Ideen und ihre Auswüchse, Nachkommen und Söhne..." />
+	{% endblock %}
+	<meta property="og:image" content="http://www.ideen-und-soehne.de/static/images/vorschau.jpg" />
+	<meta property="og:site_name" content="Ideen und Söhne" />        
+	<meta property="og:locale" content="de_DE" />        
+	
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="{{ SITEURL }}">{{ SITENAME }} <strong>{{ SITESUBTITLE }}</strong></a></h1>
+        </header><!-- /#banner -->
+        <nav id="menu"><ul>
+        {% for title, link in MENUITEMS %}
+            <li><a href="{{ link }}">{{ title }}</a></li>
+        {% endfor %}
+        {% if DISPLAY_PAGES_ON_MENU %}
+          {% for p in PAGES %}
+            <li{% if p == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
+          {% endfor %}
+        {% else %}
+          {% for cat, null in categories %}
+            <li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
+          {% endfor %}
+        {% endif %}
+        </ul></nav><!-- /#menu -->
+        {% block content %}
+        {% endblock %}
+        <footer id="contentinfo" class="body">
+                <address id="about" class="">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
+                which takes great advantage of <a href="http://python.org">Python</a>. <br />
+                
+                </address><!-- /#about -->
+                <address>
+					von <a href="{{ SITEURL }}/author/gregor-grosse-bolting.html"><span class="">Gregor Große-Bölting</span></a>
+				</address>
+                
+        </footer><!-- /#contentinfo -->
+        
+        <!-- Piwik -->
+		<script type="text/javascript">
+		  var _paq = _paq || [];
+		  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+		  _paq.push(["setCookieDomain", "*.ideen-und-soehne.de"]);
+		  _paq.push(["setDomains", ["*.ideen-und-soehne.de","*.xn--ideen-und-shne-5pb.de","*.ideenundsoehne.de","*.wortgestalten.net"]]);
+		  _paq.push(["trackPageView"]);
+		  _paq.push(["enableLinkTracking"]);
+		
+		  (function() {
+		    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://s464271758.online.de/piwik/";
+		    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+		    _paq.push(["setSiteId", "1"]);
+		    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+		    g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+		  })();
+		</script>
+		<!-- End Piwik Code -->
+</body>
+</html>

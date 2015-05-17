@@ -1,0 +1,211 @@
+$blue: #639;
+$yellow: #FF6;
+$green: #096;
+
+$text: #444;
+$headline: #666;
+
+@font-face {
+	font-family: Gudea;
+	src: url("Gudea/Gudea-Regular_auto.eot");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: Gudea;
+	src: url("Gudea/Gudea-Regular_auto.ttf");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: GudeaBold;
+	src: url("Gudea/Gudea-Bold_auto.eot");
+}
+@font-face {
+	font-family: GudeaBold;
+	src: url("Gudea/Gudea-Bold_auto.ttf");
+}
+@font-face {
+	font-family: GudeaItalic;
+	src: url("Gudea/Gudea-Italic_auto.eot");
+}
+@font-face {
+	font-family: GudeaItalic;
+	src: url("Gudea/Gudea-Italic_auto.ttf");
+}
+
+* {
+	margin: 0;
+	padding: 0; 
+}
+
+html {
+	background: url("../images/pw_maze_white.png");
+	
+}
+
+
+
+body {
+	width: 800px;
+	margin: 0 auto;
+	font: 400 19px/1.6 'Gudea', Verdana, Helvetica, sans-serif;
+	color: $text;
+	background: transparent;
+	
+	em {
+		font: 400 19px/1.6 'GudeaItalic', Verdana, Helvetica, sans-serif;	
+	}
+	
+	strong {
+		font: 400 19px/1.6 'GudeaBold', Verdana, Helvetica, sans-serif;
+	}
+	
+	.smallBold {
+		font: 400 14px/1.6 'GudeaBold', Verdana, Helvetica, sans-serif;
+	}
+
+	h1 {
+		text-align: center;
+		font: 400 95px/1.1 'Kreon', Georgia, serif;
+		a {
+			border-bottom: 7px solid $green;
+			color: $green;
+			
+			&:hover {
+				color: $green;
+				border-bottom: none;
+			}
+		}
+	}
+
+	h2 {
+		font: 400 60px/1.1 'Kreon', Georgia, serif;
+		margin: 35px 0 20px 0;
+		a {
+			color: $headline;
+			
+		}
+		
+		&.entry-title {
+			margin-top: 65px;
+		}
+	}
+	
+	h3 {
+		font: 400 25px/1.1 'Kreon', Georgia, serif;
+		margin: 0.7em 0 0 0;
+	}
+ 
+	p {
+		padding: 0.4em 0 0.4em 0;
+		-moz-hyphens: auto;
+		-o-hyphens: auto;
+		-webkit-hyphens: auto;
+		-ms-hyphens: auto;
+		hyphens: auto;
+		
+		&.paginator {
+			margin-top: 25px;
+		}
+		
+	}
+	
+	a {
+		color: $green ;
+		text-decoration: none;
+		
+		&:hover {
+			color: $text;
+		}
+		
+	}
+	
+	blockquote {
+		padding-left: 15px;
+		margin-left: 15px;
+		border-left: 3px solid $text;
+	}
+	
+	address.vcard.author {
+		font: 400 19px/1.6 'GudeaItalic', Verdana, Helvetica, sans-serif !important;
+	}
+	
+	img {
+		float: right;
+	}
+	
+	header {
+		
+		&#banner {
+			height: 200px;
+			
+			h1 {
+				padding-top: 30px;
+			}
+		}
+	}
+	
+	section {
+		&#content {
+			min-height: 600px;
+			
+			.paginator {
+				text-align: center;
+			}
+		}
+	
+		ul {
+			margin-left: 25px;
+		}
+	
+		ol {
+			&#post-list {
+				list-style-type: none;
+			}
+		
+		}
+		
+		dl {
+			
+			dd {
+				margin-left: 20px;
+			}
+		}
+		
+	}
+	
+		
+	footer {
+	
+		.author {
+			
+		}
+		
+		.published {
+			font: 400 19px/1.6 'GudeaBold', Verdana, Helvetica, sans-serif;
+			font-size: 14px;
+		}
+		
+		&#contentinfo {
+			font: 400 19px/1.6 'Gudea', Verdana, Helvetica, sans-serif;
+			font-style: normal !important;
+			text-align: center;
+			margin-top: 50px;
+			border-top: $blue 1px solid;
+			height: 100px;
+			
+			a {
+				color: $green;
+				&:hover {
+					color: $blue;
+				}
+			}
+			
+			p {
+				text-align: center;
+				margin-top: 25px;
+			}
+		}
+	}
+}

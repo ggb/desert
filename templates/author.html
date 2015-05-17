@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block praefix %}../{% endblock %}
+
+{% block title %}{{ SITENAME }} - Beiträge von {{ author }}{% endblock %}
+
+{% block content %}
+<h2>About</h2>
+<section>
+	<dl itemscope itemtype="http://schema.org/Person">
+		<dt>Name</dt>
+		<dd itemprop="name">Gregor Große-Bölting</dd>
+		<dt>Nickname</dt>
+		<dd>Nicht wirklich, nur ein Kürzel: <span itemprop="nickname">ggb</span></dd>
+		<dt>Was ich so mache...</dt>
+		<dd>Aktuell studiere ich an der <span itemprop="affiliation"> Christian-Albrechts-Universität zu Kiel</span> mit dem Ziel einen <span itemprop="title">Master of Arts</span> in den Fächern Philosophie und Informatik zu erwerben. Nachdem ich sechs Jahre Berufserfahrung im Online Marketing bei einer Kieler Agentur erwerben konnte, arbeite ich seit Mai 2013 als <span itemprop="jobTitle">Entwickler</span> bei der <a href="http://www.graphomate.com" target="blank" itemprop="worksFor">graphomate GmbH</a>.</dd>
+		<dt>Ich interessiere mich für...</dt>
+		<dd>Eine ganze Reihe von Dingen, aktuell vor allem Webprogrammierung, visuelle Kommunikation und Lernsoftware, aber auch für Anthropologie und praktische Philosophie. </dd>
+		<dt>Website</dt>
+		<dd><a href="http://www.ideen-und-soehne.de" itemprop="url">Ideen und Söhne</a> &ndash; diese Website hier.</dd>
+		<dt>Social</dt>
+		<dd>
+			<ul>
+				<li>besucht mich auf <a rel="me" href="https://plus.google.com/u/0/109662324823202347122" target="blank">Google+</a></li>
+			</ul>
+		</dd>
+	</dl>
+</section>	
+{% endblock %}
+

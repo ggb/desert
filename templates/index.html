@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<section id="content">
+{% block content_title %}
+
+{% endblock %}
+
+<ol id="post-list">
+{% for article in articles_page.object_list %}
+        <li><article class="hentry">
+                <header> <h2 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2> </header>
+                <footer class="post-info smallBold">
+                    <abbr class="published" title="{{ article.date.isoformat() }}"> {{ article.locale_date }} </abbr>
+                    <abbr class="updated" title="{{ article.date.isoformat() }}" style="display: none;"> {{ article.locale_date }} </abbr>
+                    &ndash; von <span class="author" title="Gregor Große-Bölting"><div class="vcard" style="display: inline-block;"><a class="url fn" rel="author" href="{{ SITEURL }}/author/gregor-grosse-bolting.html">Gregor</a></div></span>
+                </footer><!-- /.post-info -->
+                <div class="entry-content"> {{ article.summary }} </div><!-- /.entry-content -->
+        </article></li>
+{% endfor %}
+</ol><!-- /#posts-list -->
+{% include 'pagination.html' %}
+</section><!-- /#content -->
+{% endblock content %}

@@ -1,0 +1,119 @@
+@font-face {
+  font-family: Gudea;
+  src: url("Gudea/Gudea-Regular_auto.eot");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: Gudea;
+  src: url("Gudea/Gudea-Regular_auto.ttf");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: GudeaBold;
+  src: url("Gudea/Gudea-Bold_auto.eot"); }
+
+@font-face {
+  font-family: GudeaBold;
+  src: url("Gudea/Gudea-Bold_auto.ttf"); }
+
+@font-face {
+  font-family: GudeaItalic;
+  src: url("Gudea/Gudea-Italic_auto.eot"); }
+
+@font-face {
+  font-family: GudeaItalic;
+  src: url("Gudea/Gudea-Italic_auto.ttf"); }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  background: url("../images/pw_maze_white.png"); }
+
+body {
+  width: 800px;
+  margin: 0 auto;
+  font: 400 19px/1.6 'Gudea', Verdana, Helvetica, sans-serif;
+  color: #444444;
+  background: transparent; }
+  body em {
+    font: 400 19px/1.6 'GudeaItalic', Verdana, Helvetica, sans-serif; }
+  body strong {
+    font: 400 19px/1.6 'GudeaBold', Verdana, Helvetica, sans-serif; }
+  body .smallBold {
+    font: 400 14px/1.6 'GudeaBold', Verdana, Helvetica, sans-serif; }
+  body h1 {
+    text-align: center;
+    font: 400 95px/1.1 'Kreon', Georgia, serif; }
+    body h1 a {
+      border-bottom: 7px solid #009966;
+      color: #009966; }
+      body h1 a:hover {
+        color: #009966;
+        border-bottom: none; }
+  body h2 {
+    font: 400 60px/1.1 'Kreon', Georgia, serif;
+    margin: 35px 0 20px 0; }
+    body h2 a {
+      color: #666666; }
+    body h2.entry-title {
+      margin-top: 65px; }
+  body h3 {
+    font: 400 25px/1.1 'Kreon', Georgia, serif;
+    margin: 0.7em 0 0 0; }
+  body p {
+    padding: 0.4em 0 0.4em 0;
+    -moz-hyphens: auto;
+    -o-hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto; }
+    body p.paginator {
+      margin-top: 25px; }
+  body a {
+    color: #009966;
+    text-decoration: none; }
+    body a:hover {
+      color: #444444; }
+  body blockquote {
+    padding-left: 15px;
+    margin-left: 15px;
+    border-left: 3px solid #444444; }
+  body address.vcard.author {
+    font: 400 19px/1.6 'GudeaItalic', Verdana, Helvetica, sans-serif !important; }
+  body img {
+    float: right; }
+  body header#banner {
+    height: 200px; }
+    body header#banner h1 {
+      padding-top: 30px; }
+  body section#content {
+    min-height: 600px; }
+    body section#content .paginator {
+      text-align: center; }
+  body section ul {
+    margin-left: 25px; }
+  body section ol#post-list {
+    list-style-type: none; }
+  body section dl dd {
+    margin-left: 20px; }
+  body footer .published {
+    font: 400 19px/1.6 'GudeaBold', Verdana, Helvetica, sans-serif;
+    font-size: 14px; }
+  body footer#contentinfo {
+    font: 400 19px/1.6 'Gudea', Verdana, Helvetica, sans-serif;
+    font-style: normal !important;
+    text-align: center;
+    margin-top: 50px;
+    border-top: #663399 1px solid;
+    height: 100px; }
+    body footer#contentinfo a {
+      color: #009966; }
+      body footer#contentinfo a:hover {
+        color: #663399; }
+    body footer#contentinfo p {
+      text-align: center;
+      margin-top: 25px; }
